@@ -46,3 +46,36 @@ public static List<Integer> quicksort(List<Integer> numbers) {
     }
 }
 ```
+
+###버블 정렬
+- 최악의 경우 역순으로 정렬되어 있는 리스트를 정렬할때 O(n^2), 순환할 때마다 하나의 원소만 변경하기 때문
+- 최선의 경우 리스트가 이미 정렬되어있을 때 O(n), 원소의 위치가 변경되지 않기 때문에 원소의 위치를 변경하지 않아도 됨
+
+```java
+public class BubbleSort {
+
+public void bubbleSort(int[] numbers) {
+    boolean numbersSwitched;
+    do {
+        numbersSwitched = false;
+        for (int i = 0; i < numbers.length - 1; i++) {
+            if (numbers[i + 1] < numbers[i]) {
+                int tmp = numbers[i + 1];
+                numbers[i + 1] = numbers[i];
+                numbers[i] = tmp;
+                numbersSwitched = true;
+            }
+        }
+    } while (numbersSwitched);
+}
+
+    @Test
+    public void testBubble() {
+        final int[] numbers = {6, 4, 9, 5};
+        final int[] expected = {4, 5, 6, 9};
+
+        bubbleSort(numbers);
+        assertArrayEquals(expected, numbers);
+    }
+}
+```
