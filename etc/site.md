@@ -1,10 +1,11 @@
 #Site
 
-[css, javascript tutorial] http://www.w3schools.com/
-[cronÇ¥Çö] http://crontab.guru/
-[json µ¥ÀÌÅÍ¸¦ Ç¥·Î ±¸¼º] http://json.bloople.net/
-[json À¯È¿¼º Ã¼Å©] http://jsonlint.com/
-[Á¤±Ô½Ä Ã¼Å©] http://www.regexr.com/
-[¼ıÀÚ¾ß±¸°ÔÀÓTDD] https://youtu.be/960hX13PDuk
-[baekjoon¾Ë°í¸®Áò] https://www.acmicpc.net/
-[gitignore] https://www.gitignore.io/
+- [css, javascript tutorial] http://www.w3schools.com/
+- [croní‘œí˜„] http://crontab.guru/
+- [json ë°ì´í„°ë¥¼ í‘œë¡œ êµ¬ì„±] http://json.bloople.net/
+- [json ìœ íš¨ì„± ì²´í¬] http://jsonlint.com/
+- [ì •ê·œì‹ ì²´í¬] http://www.regexr.com/
+- [ìˆ«ìì•¼êµ¬ê²Œì„TDD] https://youtu.be/960hX13PDuk
+- [baekjoonì•Œê³ ë¦¬ì¦˜] https://www.acmicpc.net/
+- [gitignore] https://www.gitignore.io/
+- [markdown editor] https://stackedit.io/
