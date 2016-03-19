@@ -1,44 +1,43 @@
-#Hadoop ¼³Ä¡
+#Hadoop ì„¤ì¹˜
 
-###Java ¼³Ä¡
+###Java ì„¤ì¹˜
 ````
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install oracle-java7-installer
 ````
 
-###SSH ¼³Á¤
-ÇÏµÓÀº SSH ÇÁ·ÎÅäÄİÀ» ÀÌ¿ëÇØ ÇÏµÓ Å¬·¯½ºÅÍ °£ÀÇ ³»ºÎÅë½ÅÀ» ¼öÇàÇÑ´Ù.
+###SSH ì„¤ì •
+í•˜ë‘¡ì€ SSH í”„ë¡œí† ì½œì„ ì´ìš©í•´ í•˜ë‘¡ í´ëŸ¬ìŠ¤í„° ê°„ì˜ ë‚´ë¶€í†µì‹ ì„ ìˆ˜í–‰í•œë‹¤.
 ````
 apt-get install openssh-server
 ````
 
-SSH¼³Ä¡°¡ ¿Ï·áµÇ¸é 'netstat ?ntl'À» ÅëÇØ SSHÇÁ·ÎÅäÄİÀÌ Á¦´ë·Î ¼³Ä¡µÇ¾ú´ÂÁö¸¦ È®ÀÎÇÑ´Ù.
-Active Internet connections¸ñ·Ï¿¡¼­ Local Address ¿­°ú State¸¦ ÅëÇØ SSH Åë½Å »óÅÂ¸¦ È®ÀÎÇÑ´Ù.
-Local Address:0.0.0.0:22, ::: 22
-State:LISTEN
+- SSHì„¤ì¹˜ê°€ ì™„ë£Œë˜ë©´ 'netstat ntl'ì„ í†µí•´ SSHí”„ë¡œí† ì½œì´ ì œëŒ€ë¡œ ì„¤ì¹˜ë˜ì—ˆëŠ”ì§€ë¥¼ í™•ì¸í•œë‹¤.
+- Active Internet connectionsëª©ë¡ì—ì„œ Local Address ì—´ê³¼ Stateë¥¼ í†µí•´ SSH í†µì‹  ìƒíƒœë¥¼ í™•ì¸í•œë‹¤.
+- Local Address:0.0.0.0:22, ::: 22 State:LISTEN
 
 ````
 ssh-keygen-t rsa
 ````
-ÇÑ½ÖÀÇ RSA °ø°³Å°¸¦ »ı¼ºÇÑ´Ù.
+í•œìŒì˜ RSA ê³µê°œí‚¤ë¥¼ ìƒì„±í•œë‹¤.
 
-###Hadoop ´Ù¿î·Îµå
+###Hadoop ë‹¤ìš´ë¡œë“œ
 ````
-cp ?R /home/hadoop/Downloads/hadoop-1.2.1   /usr/local
+cp R /home/hadoop/Downloads/hadoop-1.2.1   /usr/local
 ````
-usr/local Æú´õ·Î º¹»çÇÑ´Ù.
+usr/local í´ë”ë¡œ ë³µì‚¬í•œë‹¤.
 
 
 ````
 cd usr/local
 ````
-hadoop-1.2.1 Æú´õ°¡ /usr/local µğ·ºÅä¸®¿¡ º¹»ç°¡ Á¦´ë·Î µÆ´ÂÁö È®ÀÎ
+hadoop-1.2.1 í´ë”ê°€ /usr/local ë””ë ‰í† ë¦¬ì— ë³µì‚¬ê°€ ì œëŒ€ë¡œ ëëŠ”ì§€ í™•ì¸
 
 
-####Hadoop È¯°æÆÄÀÏ ¼³Á¤
-ÇÏµÓ ¼³Ä¡ °úÁ¤¿¡¼­ È¯°æ ¼³Á¤À» À§ÇÑ Áß¿ä ÆÄÀÏµéÀÌ ÀÖ´Ù.
-ÀÇ»çºĞ»ê ¸ğµå(Pseudo-distributed mode)¿¡¼­´Â 4°³ÀÇ ÆÄÀÏ¸¸ ¼öÁ¤ÇÑ´Ù.
+####Hadoop í™˜ê²½íŒŒì¼ ì„¤ì •
+í•˜ë‘¡ ì„¤ì¹˜ ê³¼ì •ì—ì„œ í™˜ê²½ ì„¤ì •ì„ ìœ„í•œ ì¤‘ìš” íŒŒì¼ë“¤ì´ ìˆë‹¤.
+ì˜ì‚¬ë¶„ì‚° ëª¨ë“œ(Pseudo-distributed mode)ì—ì„œëŠ” 4ê°œì˜ íŒŒì¼ë§Œ ìˆ˜ì •í•œë‹¤.
 ````
 core-site.xml
 hdfs-site.xml
@@ -49,12 +48,12 @@ hadoop-env.sh
 ````
 ./bin/hadoop namenode -format
 ````
-ÇÏµÓ ÆÄÀÏ ½Ã½ºÅÛ(HDFS) Æ÷¸ËÆÃ
+í•˜ë‘¡ íŒŒì¼ ì‹œìŠ¤í…œ(HDFS) í¬ë§·íŒ…
 
 ````
 ./bin/start-all.sh
 ````
-µ¥¸ó ÇÁ·Î¼¼½º ½ÇÇà
+ë°ëª¬ í”„ë¡œì„¸ìŠ¤ ì‹¤í–‰
 
 ````
 NameNode
@@ -63,4 +62,4 @@ TaskTracker
 DataNode
 JobTracker
 ````
-ÀÚ¹ÙÀÇ jsp ¸í·É¾î¸¦ »ç¿ëÇÏ¿© µ¥¸óÀÌ µ¿ÀÛÇÏ°í ÀÖ´ÂÁö È®ÀÎ
+ìë°”ì˜ jsp ëª…ë ¹ì–´ë¥¼ ì‚¬ìš©í•˜ì—¬ ë°ëª¬ì´ ë™ì‘í•˜ê³  ìˆëŠ”ì§€ í™•ì¸
