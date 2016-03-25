@@ -1,4 +1,4 @@
-#K¹øÂ° ¼ö
+#Kë²ˆì§¸ ìˆ˜
 ````java
 import java.util.Arrays;
 import java.util.Scanner;
@@ -27,4 +27,4 @@ public class Main {
 	}
 }
 ````
-- ½Ã°£ÃÊ°ú
+- Â½ÃƒÂ°Â£ÃƒÃŠÂ°Ãº
