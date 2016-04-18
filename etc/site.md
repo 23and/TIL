@@ -15,6 +15,7 @@
 - [java8 hash] https://youtu.be/c3RVW3KGIIE
 - [개발자 Q&A] http://hashcode.co.kr/
 - [인터뷰] https://crack-tech-interview.com/
+- [개발자 면접] http://blog.java2game.com/401
 - [점자 스마트워치] http://www.dotincorp.com/
  - 점자가 저절로 움직이는, 능동형 점자 디스플레이 기술
  - 점자 교육 기능, 시계형 점자리더기, E-BOOK 리딩
