@@ -9,3 +9,27 @@
 - V put(K key, V value) : key 와 value를 매핑하여 HashMap에 저장한다.
 - V remove(Object key) : 지정된 키(key)와 이에 매핑된 값을 HashMap에서 삭제 한다.
 - int size() : HashMap에 포함된 요소의 개수를 리턴한다.
+
+### Value값으로 정렬
+````java
+public class SortHashMapValues {
+	public static void main(String[] args) {
+		Map<String, Integer> map = new HashMap<String, Integer>();
+		map.put("one", 1);
+		map.put("ten", 10);
+		map.put("three", 3);
+		map.put("two", 2);
+
+		List list = new ArrayList(map.entrySet());
+
+		Collections.sort(list, new Comparator() {
+			public int compare(Object obj1, Object obj2) {
+				return ((Comparable) ((Map.Entry) (obj1)).getValue()).compareTo(((Map.Entry) (obj2)).getValue());
+			}
+		});
+		System.out.println(list);
+	}
+}
+````
+
+- 참고 : http://www.programcreek.com/2013/03/java-sort-map-by-value/
