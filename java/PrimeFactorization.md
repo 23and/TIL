@@ -1,10 +1,10 @@
-#Prime Factorization
+ï»¿#Prime Factorization
 
 ````java
 public class PrimeFactorization {
 	public static void main(String[] args){
 		int div = 2;
-		System.out.print("°ª ÀÔ·Â : ");
+		System.out.print("ê°’ìž…ë ¥ : ");
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		
