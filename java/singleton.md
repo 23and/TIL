@@ -68,4 +68,13 @@ public enum Singleton {
 ````
 - Enum type들은 프로그램 내에서 한번 초기화 된다.
 
-- 참고: http://www.jpstory.net/2013/05/singleton-pattern/
+###static 메소드와 차이점
+- 싱글톤을 안쓰고, static 메쏘드를 가진 클래스로 쓰게되면, 클라이언트 코드가 짧아 집니다.
+````java
+StaticClass.doSomething();//static
+SingletonClass.getInstance().doSomething();//singleton
+````
+- 싱글톤을 쓰게 되면, extends와 implements가 가능하다.
+- 상속이나 생성자 등을 활용할 수가 있다.
+
+- 참고: http://www.jpstory.net/2013/05/singleton-pattern/, http://iilii.egloos.com/5433527
