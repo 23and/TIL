@@ -45,7 +45,7 @@ public class FindPath {
 0 0 1
 1 0 0
 ````
--출력
+- 출력
 ````
 1 1 1
 1 1 1
