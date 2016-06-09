@@ -13,11 +13,8 @@
 - 평균적인 성능 O(nlogn)
 - 최악 O(n^2)
 - pivot을 선택하는 방법에 따라 다르다.
-
 ```java
-public class Quicksort {
-
-public static List<Integer> quicksort(List<Integer> numbers) {
+public List<Integer> quickSort(List<Integer> numbers) {
     if (numbers.size() < 2) {
         return numbers;
     }
@@ -34,22 +31,12 @@ public static List<Integer> quicksort(List<Integer> numbers) {
         }
     }
 
-    final List<Integer> sorted = quicksort(lower);
+    final List<Integer> sorted = quickSort(lower);
 
     sorted.add(pivot);
-    sorted.addAll(quicksort(higher));
+    sorted.addAll(quickSort(higher));
 
     return sorted;
-}
-
-    @Test
-    public void testQuicksort() {
-        final List<Integer> numbers = Arrays.asList(6, 4, 9, 5);
-        final List<Integer> expected = Arrays.asList(4, 5, 6, 9);
-
-        final List<Integer> actual = quicksort(numbers);
-        assertEquals(expected, actual);
-    }
 }
 ```
 
@@ -58,8 +45,6 @@ public static List<Integer> quicksort(List<Integer> numbers) {
 - 최선의 경우 리스트가 이미 정렬되어있을 때 O(n), 원소의 위치가 변경되지 않기 때문에 원소의 위치를 변경하지 않아도 됨
 - 버블 정렬 개선 : 무회전인 경우 정렬 중단
 ```java
-public class BubbleSort {
-
 public void bubbleSort(int[] numbers) {
     boolean numbersSwitched;
     do {
@@ -74,14 +59,37 @@ public void bubbleSort(int[] numbers) {
         }
     } while (numbersSwitched);
 }
-
-    @Test
-    public void testBubble() {
-        final int[] numbers = {6, 4, 9, 5};
-        final int[] expected = {4, 5, 6, 9};
-
-        bubbleSort(numbers);
-        assertArrayEquals(expected, numbers);
-    }
-}
 ```
+
+###삽입정렬
+````java
+public void insertionSort(List<Integer> numbers){
+	for(int i=0; i<numbers.size(); i++){
+		int start = i;
+		while(start > 0 && numbers.get(start-1) > numbers.get(start)){
+			swap(numbers, start, start-1);
+			start--;
+		}
+	}
+}
+
+public void swap(List<Integer> numbers, int i, int j){
+	int temp = numbers.get(i);
+	numbers.set(i, numbers.get(j));
+	numbers.set(j, temp);
+}
+````
+
+###선택정렬
+````java
+public void selectionSort(List<Integer> numbers){
+	for(int i=0; i<numbers.size(); i++){
+		int minIndex = i;
+		for(int j=i+1; j<numbers.size(); j++){
+			if(numbers.get(minIndex) > numbers.get(j))
+			minIndex = j;
+		}
+	swap(numbers, i, minIndex);
+	}
+}
+````
