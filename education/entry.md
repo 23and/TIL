@@ -1,7 +1,7 @@
 #entry : entry로 배우는 programming
 - sw교육 프로그램
 
-###오늘 entry로 만든 작품
+###6/16 entry로 만든 작품
 - 락커 : 시작
  - http://goo.gl/ETBEO4
 - 낚시왕 : 스페이스바
@@ -20,3 +20,25 @@
  - http://goo.gl/ul4MWO
 - 수도 맞추기 : 퀴즈, 대답, 점수
  - http://goo.gl/CtLebp
+
+###6/20 entry로 만든 작품
+- 펭귄 : 수평 배경 연속
+ - http://goo.gl/yeXRE4
+- 무당벌레 : 수직 배경 연속
+ - http://goo.gl/OSMGRO
+- 육상선수와 뱀 : 뱀 피하기
+ - http://goo.gl/rplDz1
+- 넌센스 퀴즈 : 상태 모양
+ - http://goo.gl/7mS3tF
+- 구구단 : 무작위 문제
+ - http://goo.gl/8IKUn7
+- 칠판 : 미완성
+ - http://goo.gl/C6rRt9
+- 자동차 계란 피하기
+ - http://goo.gl/3d1nsd
+- 달팽이 거북이 경주
+ - http://goo.gl/q3awir
+- 박쥐 잡는 용
+ - http://goo.gl/A8UvDL
+- 복불복 게임 리스트 : 리스트, 미완성
+ - http://goo.gl/AiJpOZ
