@@ -14,4 +14,23 @@
 - 최소 정점의 인접정점들에 대한 경로의 길이를 계산하여 Distance배열 안의 값보다 작다면 갱신한다. 
 - 그래프 내의 모든 정점이 최단경로가 될 때 까지 앞의 단계를 반복한다.
 
-- 출처 :http://pooh-explorer.tistory.com/
+###의사코드
+- u := Extract_Min(Q)
+ - 꼭짓점의 집합 Q에서 가장 작은 d[u]값을 찾은 다음 그 꼭짓점 u를 Q에서 제거한 후 반환하는 함수
+````
+function Dijkstra(G, w, s)
+	for each vertex v in V[G]// 초기화
+			d[v] := infinity
+			previous[v] := undefined 
+	d[s] := 0//덮어쓰기
+	S := empty set
+	Q := set of all vertices
+	while Q is not an empty set// 알고리즘의 실행
+		u := Extract_Min(Q)//집합 Q에서 d[u]가 최소인 u를 찾아 빼냄
+		S := S union {u}//빼낸 u를 S에 삽입
+		for each v with edge (u,v) defined      
+			if d[v] > d[u] + w(u,v)             
+				d[v] := d[u] + w(u,v)// 변(u,v)의 경감
+				previous[v] := u//경로 추적할 때 쓰임//
+````
+- 출처 :http://pooh-explorer.tistory.com/, 위키피디아
