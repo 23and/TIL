@@ -24,6 +24,7 @@
 - [읽기좋은코드] https://nhnent.dooray.com/share/posts/1kprIA7VR3S4lwuMCa4D9Q
 - [소스 코드 빌드 및 배포 자동화] https://www.youtube.com/playlist?list=PLqaSEyuwXkSrJ5Z4y8oCffAOPvGBiNAST
 - [git 브랜치 배우기] http://learnbranch.urigit.com
+- [웹 개발자의 10가지 흔한 실수] http://code.tutsplus.com/ko/articles/10-common-web-developer-mistakes--cms-24791
 - [점자 스마트워치] http://www.dotincorp.com/
  - 점자가 저절로 움직이는, 능동형 점자 디스플레이 기술
  - 점자 교육 기능, 시계형 점자리더기, E-BOOK 리딩
