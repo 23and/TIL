@@ -1,0 +1,24 @@
+#Eclipse DB 연결
+
+- Window - Show View - Other
+ - Data Management - Data Source Explorer
+- DataBase Connections 오른쪽 마우스
+ - New
+ - MySQL 선택 - Next
+ - +
+ - MySQL JDBC Driver 5.1
+- JAR List tab
+ - 기존 mysql-connecor-java-5.1.0-bin.jar 삭제
+ - 다운받은 mysql-connector-java-5.1.39-bin.jar 추가
+ - OK
+- New Connection Profile
+ - MySQL JDBC Driver
+ - Database : DB명
+ - URL : jdbc:mysql://localhost:3306/DB명
+ - User name : 계정 명
+ - Password : 계정 비밀번호
+ - Test Connection
+ - Finish
+ - OK
+- New - Folder - SQL File
+- Window - Show View - SQL Results
