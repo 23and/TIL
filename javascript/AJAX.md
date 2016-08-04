@@ -14,3 +14,45 @@
 - XMLHttpRequest 객체는 현재 HTML페이지의 상태를 가진 XML 메세지를 구성하여 웹서버로 보낸다.
 - 서버 내에서 내부 처리한 뒤에 응답 XML 메세지를 보내어 XMLHttpRequest 객체가 수신한다.
 - 웹 서버에서 반환된 XML 메세지를 파싱하여 DOM 객체를 업데이트한다.
+
+- password check
+````jquery
+$(document).ready(function(){
+	$('#currentPassword').blur(function(){
+	    $.ajax({
+	        url:'요청 주소',
+	        type:"POST",
+	        data: {
+	        	"password" : $('#password').val()
+	        },
+	        success:function(data){
+	        	var result = data;
+	            if($.trim(data) == "true"){
+	            	$('#checkResult').html('&nbsp;&nbsp;');
+	            }else if($.trim(data) == "false"){
+	            	$('#checkResult').html('Password did not match.');
+	            }
+	        },
+	        error:function(jqXHR, textStatus, errorThrown){
+	            alert("error\n" + textStatus + " : " + errorThrown);
+	            self.close();
+	        }
+	    });	
+	});
+});
+````
+````java
+PrintWriter out = response.getWriter();
+String password = request.getParameter("password");
+try{
+	HttpSession session = request.getSession();
+	int memberNumber = (int)session.getAttribute("memberNumber");
+	if(password.equals(MemberDAO.checkPassword(memberNumber))){
+		out.println("true");
+	}else{
+		out.println("false");
+	}
+}catch(Exception e){
+	response.sendRedirect("error.jsp");
+}
+````
