@@ -1,0 +1,88 @@
+#CSS의 의미와 등장
+
+- DOM 트리 구조에서 위에서 부터 상속받아 내려오면서 속성이 적용되는 특징
+- 적용우선순위
+ - Lnline style
+ - Internal Style Sheet
+ - External Style Sheet
+ - 브라우저 기본값
+ - !important(거의 쓰지않음)
+- css 셀렉터
+ - 전체선택자
+ - *{속성:속성값}
+ - 하위의 모든 요소에 해당 스타일을 적용
+- 유형 선택자
+ - 태그{속성:속성값}
+ - 태그에 해당 스타일 적용
+- ID선택자
+ - #id{속성:속성값}
+ - ID를 가진 엘리먼트에 해당 스타일을 적용
+ - ID는 한페이지에서 한번만 쓸 수 있음(거의 ID보다는 class를 많이 씀)
+- 클래스 선택자
+ - .class{속성: 속성값}
+ - class명을 가진 엘리먼트에 해당 스타일을 적용
+- 자식 선택자
+ - 요소>요소{속성:속성값}
+ - 요소가 어떤 요소의 자식일 때 해당 스타일을 적용
+ - 예 : div>p{font-style:italic}
+- 자손 선택자
+ - 요소 요소 {속성:속성값}
+ - 요소 내부에 있는 자손 요소에 해당 스타일을 적용
+ - 자식선택자와 자손 선택자의 다른점
+ - 자식선택자: 부모 바로 아래있는 요소에만 영향을 미침
+ - 자손선택자:부모안에있는 요소에 영향 미침
+- 인접 형제 선택자
+ - 요소1+요소2{속성:속성값}
+ - 같은 부모 아래 요소1 바로 뒤에 오는 요소2에 해당 스타일을 적용
+- 일반 형제 선택자
+ - 요소1~요소2{속성:속성값}
+- 속성 선택자
+ - 요소[속성]{속성:속성값}
+ - 해당 속성을 가지고 있는 요소에 해당 스타일을 적용
+- 의사 클래스 선택자
+ - el li:nth-child(2n){color:red}
+- 의사요소 선택자
+
+###CSS 텍스트 관련 속성
+- font-family
+- font-size : font사이즈에서 쓰는 보통 단위는 px
+- 폰트사이즈 : em 16px=1em / % 16ppx=100%로 계산
+- http://caniuse.com/ 브라우저마다 적용 범위를 알려준다
+- font-weight : 굵기 /단점:브라우저마다 굵기가 다르게 나옴
+- font-style: 기울어진건지 밑줄되어있는 것인지
+- line-height: 행과 행 사이의 간격 / 보통 비율로 많이 씀 / 예 : *{line-height:1.5}
+- vertical-align : 텍스트 세로
+- color 
+ - 16진수 #000000, #000 / RGB rab(0,0,0)
+ - RGBA 투명도 조절 , 보텅 16진수로 많이 쓴다
+- text-decoration 
+ - underline:text-bottom에 라인 생성
+ - overline:text-top에 라인 생성
+ - text-indent : 텍스트 들여쓰기
+- 속성중에 inherit, initial 은 부모의 속성을 따르거나 따르지않거나 설정할 수 있는 것. 
+- 레이아웃
+ - 레이아웃이란? 공간안에 효과적으로 구성하고 배열하는 일
+ - display 엘리먼트 요소의 고유 성질을 설정할 수 있는 속성
+ - display:block 줄바꿈이 되는 공간을 가지게 되는 속성
+ - display:inline 줄바꿈이 되지 않고 한 줄로 나열되는 속성
+ - display:inline-block 공간을 가지게되지만 줄바꿈은 되지않는 속성
+ - overflow 엘리먼트를 벗어나는 영역에 대한 설정
+ - overflow:hi
+ - padding
+ - margin
+ - border
+ - position : static 위치값을 가지지 않음
+ - position : inherit 상위값 상속
+ - position:relative 상대위치 
+ - position:absolute 절대위치
+ - position:pixed 고정위치 
+ - position top right bottom left z-index
+ - header를 z-index를 올려주는 경우가 많음
+ - z-index는 항상 포지션을 가지고 있어야함
+ - float, clear 배치를 정하는 속성
+ - float:none 배치없음
+ - float:left  왼쪽배치
+ - float:right 오른쪽배치
+ - clear:left 왼쪽배치 해제
+ - background
+ - background-repeat:repeat-x 가로로만 반복
