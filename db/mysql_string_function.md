@@ -51,4 +51,10 @@ trim(trailing '0' from '00012000567000')
 00012000567
 ````
 
+###replace
+- 특정 Column의 값의 일부를 바꾸고 싶을 때
+````sql
+update table set column=replace(str,  find_string, replace_with)
+````
+
 
