@@ -57,4 +57,17 @@ trim(trailing '0' from '00012000567000')
 update table set column=replace(str,  find_string, replace_with)
 ````
 
-
+###like
+- 특정 문자가 포함되어 있는 데이터를 검색 할 때
+- 특정 문자로 시작하는 데이터 검색
+````sql
+SELECT [필드명] FROM [테이블명] WHERE [필드명] LIKE '특정 문자열%;
+````
+- 특정 문자로 끝나는 데이터 검색
+````
+SELECT [필드명] FROM [테이블명] WHERE [필드명] LIKE '% 특정 문자열;
+````
+- 특정 문자 포함  데이터  검색
+````
+SELECT [필드명] FROM [테이블명] WHERE [필드명] LIKE '% 특정 문자열%;
+````
