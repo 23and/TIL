@@ -13,3 +13,9 @@ public boolean checkIp(String ip){
     return regexMatcher.matches();
 }
 ````
+````
+/\[([.\d]+)]/
+````
+- [.\d]+ <<- .과 숫자 확인 
+([.\d]+) <<- 그룹핑,여러번
+\[([.\d]+)] <<- \[는 [를 문자로 보는 것, []안에 위의 패턴있는지 확인
