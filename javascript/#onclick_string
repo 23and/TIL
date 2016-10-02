@@ -1,0 +1,19 @@
+#pass string parameter in an onclick function
+````javascript
+<input type="button" onClick="gotoNode(' + result.name + ')" />
+````
+````javascript
+var inputElement = document.createElement('input');
+inputElement.type = "button"
+inputElement.addEventListener('click', function(){
+    gotoNode(result.name);
+});
+
+​document.body.appendChild(inputElement);​
+````
+````javascript
+document.getElementById("nodeGoto").addEventListener("click", function() {
+    gotoNode(result.name);
+}, false);
+````
+- http://stackoverflow.com/questions/9643311/pass-string-parameter-in-an-onclick-function/9643494#9643494
