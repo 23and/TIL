@@ -17,3 +17,5 @@ mvn install
 - run as
  - maven build
  - goals : package
+- folder -> target
+- java -jar xx.jar
