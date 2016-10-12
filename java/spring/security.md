@@ -28,6 +28,23 @@ protected void configure(HttpSecurity http) throws Exception {
 ````
 - loginPage("/login") 로그인 페이지의 위치를 명시한다.
 - 모든 사용자들에게 접속을 허용하는 로그인페이지 “formLogin().permmitAll()” 메소드는 폼 기반 로그인과 관련된 모든 URL에 대한 모든 사용자의 접근 권한을 허용한다.
+````java
+	protected void configure(HttpSecurity http) throws Exception {
+		http
+		.authorizeRequests()
+			.antMatchers("/**/index*").authenticated()
+			.antMatchers("/**").permitAll()
+		.and()
+			.formLogin()
+			.loginPage("/login").permitAll()
+		.and()
+			.logout()
+			.logoutUrl("/logout")
+			.logoutSuccessUrl("/hello");
+	}
+````
+- /**/index* 인증된 사용자만 접근 가능하다.
+- logout 성공시 hello로 이동한다.
 
 ````html
 <c:url value="/login" var="loginUrl"/>
@@ -54,5 +71,13 @@ protected void configure(HttpSecurity http) throws Exception {
 	<sec:csrfInput />
 	<button type="submit" class="btn">Log in</button>
 </form>
-
+````
+````html
+<sec:authentication property="principal.username"/>
+ <sec:authorize access="isAnonymous()">
+ 	<br> logout
+ </sec:authorize>
+ <sec:authorize access="isAuthenticated()">
+ 	<br> login
+ </sec:authorize>
 ````
