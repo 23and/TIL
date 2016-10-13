@@ -37,6 +37,7 @@ protected void configure(HttpSecurity http) throws Exception {
 		.and()
 			.formLogin()
 			.loginPage("/login").permitAll()
+			.defaultSuccessUrl("/index")
 		.and()
 			.logout()
 			.logoutUrl("/logout")
@@ -45,6 +46,7 @@ protected void configure(HttpSecurity http) throws Exception {
 ````
 - /**/index* 인증된 사용자만 접근 가능하다.
 - logout 성공시 hello로 이동한다.
+- defaultSuccessUrl("/index") 로그인 성공시 index
 
 ````html
 <c:url value="/login" var="loginUrl"/>
