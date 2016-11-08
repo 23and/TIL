@@ -36,3 +36,8 @@ public class Application extends SpringBootServletInitializer {
 
 }
 ````
+- tomcat 올리기
+ - Dynamic Web Module 프로젝트로 설정한다.
+ - 프로젝트 우클릭-Properties-Project Facets-Dynamic Web Module 체크
+- Add and Remove -> spring application
+- 추가 후 모듈의 path /spring 으로 변경한다.
