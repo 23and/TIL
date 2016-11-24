@@ -12,3 +12,7 @@ $('input[name="level"]').change(function(){
     }
 });
 ````
+- checked
+````
+$('input[name="level"][value=“yes”]’).attr('checked', true);
+````
