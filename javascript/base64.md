@@ -131,3 +131,23 @@ console.log("인코딩 전 : " + str);
 console.log("인코딩 후 : " + enc_str);
 console.log("디코딩 후 : " + dec_str);
 ````
+- Image convert to Base64
+````html
+<input id="inp" type='file'>
+<p id="b64"></p>
+<img id="img" height="150">
+````
+````javascript
+function readFile() {
+  if (this.files && this.files[0]) {
+    var FR= new FileReader();
+    FR.onload = function(e) {
+      document.getElementById("img").src       = e.target.result;
+      document.getElementById("b64").innerHTML = e.target.result;
+    };       
+    FR.readAsDataURL( this.files[0] );
+  }
+}
+
+document.getElementById("inp").addEventListener("change", readFile, false);
+````
