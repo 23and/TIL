@@ -35,6 +35,7 @@
 - [graphic resources] http://www.freepik.com/
 - [algorithm visualizer] http://algo-visualizer.jasonpark.me/#path=backtracking/knight's_tour/basic
 - [css reference] http://cssreference.io/
+- [좋은 면접자, 지원자] https://repo.yona.io/doortts/blog/post/292
 - [점자 스마트워치] http://www.dotincorp.com/
  - 점자가 저절로 움직이는, 능동형 점자 디스플레이 기술
  - 점자 교육 기능, 시계형 점자리더기, E-BOOK 리딩
